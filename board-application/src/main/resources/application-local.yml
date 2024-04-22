@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: myapp
+    url: jdbc:postgresql://localhost:5432/boardservice
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: 'true'
+        default_schema: myapp
+    hibernate:
+      ddl-auto: update
+
+endpoint:
+  task:
+    url: http://localhost:8001
