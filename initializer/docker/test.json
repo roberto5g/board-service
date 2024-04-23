@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Finalizar relatório",
+    "description": "Finalizar relatório mensal de vendas",
+    "status": "Doing",
+    "dueDate": "2024-04-30T00:00:00",
+    "author": {
+      "id": 101,
+      "name": "João",
+      "email": "joao@example.com"
+    },
+    "assignee": {
+      "id": 102,
+      "name": "Maria",
+      "email": "maria@example.com"
+    },
+    "board": {
+      "id": 1,
+      "title": "Quadro de Tarefas Mensais",
+      "description": "Quadro para gerenciar tarefas mensais da equipe de vendas"
+    },
+    "comments": [
+      {
+        "id": 1,
+        "description": "Estou trabalhando nisso agora",
+        "author": {
+          "id": 102,
+          "name": "Maria",
+          "email": "maria@example.com"
+        },
+        "createdAt": "2024-04-20T10:30:00",
+        "updatedAt": "2024-04-20T10:30:00"
+      },
+      {
+        "id": 2,
+        "description": "Ótimo, avise-me quando estiver pronto",
+        "author": {
+          "id": 101,
+          "name": "João",
+          "email": "joao@example.com"
+        },
+        "createdAt": "2024-04-21T09:15:00",
+        "updatedAt": "2024-04-21T09:15:00"
+      }
+    ],
+    "createdAt": "2024-04-18T08:00:00",
+    "updatedAt": "2024-04-20T11:45:00"
+  },
+  {
+    "id": 2,
+    "title": "Revisar apresentação",
+    "description": "Revisar slides da apresentação para o cliente",
+    "status": "Todo",
+    "dueDate": "2024-05-05T00:00:00",
+    "author": {
+      "id": 103,
+      "name": "Ana",
+      "email": "ana@example.com"
+    },
+    "assignee": {
+      "id": 104,
+      "name": "Pedro",
+      "email": "pedro@example.com"
+    },
+    "board": {
+      "id": 202,
+      "title": "Quadro de Tarefas de Projetos",
+      "description": "Quadro para gerenciar tarefas dos projetos atuais"
+    },
+    "comments": [],
+    "createdAt": "2024-04-19T10:00:00",
+    "updatedAt": "2024-04-19T10:00:00"
+  }
+]
