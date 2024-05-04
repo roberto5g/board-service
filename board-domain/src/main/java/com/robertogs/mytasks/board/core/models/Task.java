@@ -4,7 +4,6 @@ import com.robertogs.mytasks.board.core.enums.StatusTask;
 
 import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.List;
 
 public class Task {
     private Long id;
@@ -14,8 +13,6 @@ public class Task {
     private Date dueDate;
     private User author;
     private User assignee;
-    private Board board;
-    private List<Comment> comments;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -73,22 +70,6 @@ public class Task {
 
     public void setAssignee(User assignee) {
         this.assignee = assignee;
-    }
-
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
     }
 
     public LocalDateTime getCreatedAt() {

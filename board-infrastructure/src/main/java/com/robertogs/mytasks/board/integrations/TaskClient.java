@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "TaskClient", url = "${endpoint.task.url}")
+@FeignClient(
+        value = "tasks-service",
+        url = "${endpoint.task.url}",
+        path = "/tasks-service"
+)
 public interface TaskClient {
     @GetMapping(path = "/api/v1/tasks/{boardId}", produces = MediaType.APPLICATION_JSON_VALUE)
     List<TaskResponse> findTasksByBoardId(@PathVariable("boardId") final Long boarId);

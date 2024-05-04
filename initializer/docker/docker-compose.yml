@@ -33,6 +33,18 @@ services:
     volumes:
       - ../database:/docker-entrypoint-initdb.d
 
+  smockin:
+    image: mgallina/smockin:2201
+    container_name: smockin
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+    networks:
+      - app-network
+    restart: unless-stopped
+
 networks:
   app-network:
     driver: bridge

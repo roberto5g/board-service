@@ -1,3 +1,19 @@
 spring:
   profiles:
     active: ${PROFILE:local}
+  application:
+    name: board-service
+    request-interceptor:
+      threshold: 5000
+      enabled: true
+
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+  hystrix:
+    enabled: false
