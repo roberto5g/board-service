@@ -6,14 +6,12 @@ spring:
     request-interceptor:
       threshold: 5000
       enabled: true
+  cloud:
+    openfeign:
+      client:
+        config:
+          tasksService:
+            readTimeout: 5000
+            connectTimeout: 5000
+            loggerLevel: FULL
 
-
-feign:
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        readTimeout: 5000
-        loggerLevel: basic
-  hystrix:
-    enabled: false

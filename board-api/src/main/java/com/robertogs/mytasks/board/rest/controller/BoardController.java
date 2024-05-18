@@ -5,6 +5,7 @@ import com.robertogs.mytasks.board.ports.in.InsertBoardInputPort;
 import com.robertogs.mytasks.board.rest.dto.request.BoardRequest;
 import com.robertogs.mytasks.board.rest.dto.response.BoardResponse;
 import com.robertogs.mytasks.board.rest.mapper.BoardMapper;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ public class BoardController {
     }
 
     @PostMapping
-    public ResponseEntity<BoardResponse> create(@RequestBody BoardRequest boardRequest){
+    public ResponseEntity<BoardResponse> create(@Valid @RequestBody final BoardRequest boardRequest){
         var board = insertBoardInputPort.insert(BoardMapper.INSTANCE.toBoard(boardRequest));
         return ResponseEntity.status(HttpStatus.CREATED).body(BoardMapper.INSTANCE.toBoardResponse(board));
     }

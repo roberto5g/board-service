@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @FeignClient(
-        value = "tasks-service",
-        url = "${endpoint.task.url}",
+        name = "tasksService",
+        url = "${client.task.baseUrl}",
         path = "/tasks-service"
 )
 public interface TaskClient {
